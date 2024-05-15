@@ -48,7 +48,7 @@ export const OrdersTable = () => {
 
   const addOrder = (orderInfo: Order) => {
     const newOrder: OrdersDataType = { ...orderInfo, key: orderInfo.order_id };
-    setOrdersList([...newOrder, orderInfo]);
+    setOrdersList([...ordersList, newOrder]);
   };
 
   const isEditing = (record: OrdersDataType) => record.key === editingKey;
